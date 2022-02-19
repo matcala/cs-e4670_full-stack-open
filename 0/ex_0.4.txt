@@ -1,0 +1,17 @@
+title Adding new note
+
+note over Browser:  typing note, \npressing Save
+Browser->Server:    req: HTTP POST: https://studies.cs.helsinki.fi/exampleapp/new_note
+note over Server:   saving note
+Server->Browser:    res: HTTP 302, redirect to /exampleapp/notes
+note over Browser:  page needs to be loaded again
+Browser->Server:    req: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
+Server->Browser:    res: HTTP 200, HTML code
+Browser->Server:    req: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+Server->Browser:    res: HTTP 200, CSS file
+Browser->Server:    req: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.js
+Server->Browser:    res: HTTP 200, JS file
+Browser->Server:    req: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+Server->Browser:    res: HTTP 200, JSON file
+
+note over Browser:  file transer complete,\n page rendered

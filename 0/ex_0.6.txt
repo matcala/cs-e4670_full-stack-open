@@ -1,0 +1,8 @@
+title Adding a note (SPA)
+
+note over Browser:  typing note, \npressing Save
+note over Browser:  XHR takes care of sending note
+Browser->Server:    req: HTTP POST https://studies.cs.helsinki.fi/exampleapp/spa/new_note_spa
+note over Server:   Receives note JSON data, \n updates list
+Server->Browser:    res: HTTP 201, created
+note over Browser:  Updates page

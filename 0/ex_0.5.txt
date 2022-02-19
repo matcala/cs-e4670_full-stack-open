@@ -1,0 +1,12 @@
+title Opening SPA
+
+Browser->Server:    req: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa
+Server->Browser:    res: HTTP 200, HTML code
+Browser->Server:    req: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+Server->Browser:    res: HTTP 200, CSS code
+Browser->Server:    req: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa.js
+Server->Browser:    res: HTTP 200, JS code
+note over Browser:  JS executed, \n XHR request sent
+Browser->Server:    req: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+Server->Browser:    res: HTTP 200, JSON file
+note over Browser:  Page rendered
